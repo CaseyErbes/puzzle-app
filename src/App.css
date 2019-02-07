@@ -25,10 +25,67 @@
 }
 
 .Puzzle-box {
+  box-sizing: border-box;
   height: 500px;
   width: 500px;
   margin: 30px auto 0px;
-  background-color: #F98264;
+  padding-top: 15px;
+  background-color: #D64146;
   border-radius: 2%;
   box-shadow: 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Inner-puzzle-track {
+  box-sizing: border-box;
+  height: 470px;
+  width: 470px;
+  padding-top: 10px;
+  background-color: #BD2717;
+  border-radius: 1%;
+  margin: 0px auto;
+  position: relative;
+}
+
+.Inner-puzzle-box {
+  box-sizing: border-box;
+  height: 450px;
+  width: 450px;
+  background-color: #9B1D17;
+  border-radius: 1%;
+  margin: 0px auto;
+}
+
+.Puzzle-tile {
+  position: absolute;
+  height: 116px;
+  width: 116px;
+  background-color: #ffffff;
+  border-radius: 2%;
+}
+
+/* puzzle tile positioning */
+/* boundaries between tiles are 2px each */
+.Puzzle-row-1 {
+  top: 1px;
+}
+.Puzzle-row-2 {
+  top: 118px;
+}
+.Puzzle-row-3 {
+  top: 235px;
+}
+.Puzzle-row-4 {
+  top: 352px;
+}
+.Puzzle-col-1 {
+  left: 1px;
+}
+.Puzzle-col-2 {
+  left: 118px;
+}
+.Puzzle-col-3 {
+  left: 235px;
+}
+.Puzzle-col-4 {
+  left: 352px;
 }

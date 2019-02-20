@@ -18,6 +18,15 @@ const theme = createMuiTheme({
 });
 
 class App extends Component {
+  renderTile(rowInt, colInt) {
+    let tileId = colInt+4*(rowInt-1);
+    return (
+      <div className={"Puzzle-tile Puzzle-row-"+rowInt+" Puzzle-col-"+colInt} id={tileId}>
+        <span>{tileId}</span>
+      </div>
+    );
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
@@ -29,51 +38,21 @@ class App extends Component {
             <div className="Puzzle-box">
               <div className="Inner-puzzle-track">
                 <div className="Inner-puzzle-box"></div>
-                <div className="Puzzle-tile Puzzle-row-1 Puzzle-col-1">
-                  <span>1</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-1 Puzzle-col-2">
-                  <span>2</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-1 Puzzle-col-3">
-                  <span>3</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-1 Puzzle-col-4">
-                  <span>4</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-2 Puzzle-col-1">
-                  <span>5</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-2 Puzzle-col-2">
-                  <span>6</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-2 Puzzle-col-3">
-                  <span>7</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-2 Puzzle-col-4">
-                  <span>8</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-3 Puzzle-col-1">
-                  <span>9</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-3 Puzzle-col-2">
-                  <span>10</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-3 Puzzle-col-3">
-                  <span>11</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-3 Puzzle-col-4">
-                  <span>12</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-4 Puzzle-col-1">
-                  <span>13</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-4 Puzzle-col-2">
-                  <span>14</span>
-                </div>
-                <div className="Puzzle-tile Puzzle-row-4 Puzzle-col-3">
-                  <span>15</span>
-                </div>
+                {this.renderTile(1, 1)}
+                {this.renderTile(1, 2)}
+                {this.renderTile(1, 3)}
+                {this.renderTile(1, 4)}
+                {this.renderTile(2, 1)}
+                {this.renderTile(2, 2)}
+                {this.renderTile(2, 3)}
+                {this.renderTile(2, 4)}
+                {this.renderTile(3, 1)}
+                {this.renderTile(3, 2)}
+                {this.renderTile(3, 3)}
+                {this.renderTile(3, 4)}
+                {this.renderTile(4, 1)}
+                {this.renderTile(4, 2)}
+                {this.renderTile(4, 3)}
               </div>
             </div>
           </div>
